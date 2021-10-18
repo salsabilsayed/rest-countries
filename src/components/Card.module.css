@@ -1,0 +1,34 @@
+
+
+.subTitle{
+    font-weight: 600;
+}
+
+.parent{
+    position:relative;
+    padding-top: 60%;
+    width:100%;
+    overflow: hidden;
+}
+
+.child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@media screen and (min-width:992px) {
+    .title{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+}

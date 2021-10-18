@@ -1,0 +1,107 @@
+.main{
+  min-height: 100vh;
+}
+
+/* light theme */
+
+.light-mode{
+  --main-light-bg-color: hsl(0, 0%, 98%);
+  --text-light-color: hsl(200, 15%, 8%);
+  --boxShadow-light-mode: 0 5px 8px hsl(0, 0%, 90%);
+  --element-light-bg-color: #fff;
+}
+
+.dark-mode{
+  --main-dark-bg-color: hsl(207, 26%, 17%);
+  --text-dark-color: hsl(0, 0%, 100%);
+  --boxShadow-dark-mode: 0 5px 8px hsl(210, 25%, 20%);
+  --element-dark-bg-color: hsl(209, 23%, 22%);
+}
+
+.light-theme{
+  background-color: var(--main-light-bg-color);
+  color: var(--text-light-color);
+  box-shadow: var(--boxShadow-light-mode);
+}
+
+.light-theme nav{
+  background-color: var(--element-light-bg-color);
+  box-shadow: var(--boxShadow-light-mode);
+  color: var(--text-light-color);
+}
+
+.light-theme .text{
+  color: var(--text-light-color);
+}
+
+.light-theme .text:hover{
+  color: var(--text-light-color);
+  text-decoration: none;
+}
+
+.light-theme .cardBody,.light-theme select, .light-theme input{
+  background-color: var(--element-light-bg-color);
+}
+
+.light-theme select, .light-theme .input-box{
+  border:1px solid rgb(204, 204, 204);
+  background-color: var(--element-light-bg-color);
+}
+
+.light-theme select, .light-theme .input-box{
+  background-color: var(--element-light-bg-color);
+  color:var(--text-light-color);
+}
+
+.light-theme .btn-color{
+  box-shadow: var(--boxShadow-light-mode);
+  background-color: var(--element-light-bg-color);
+  color:var(--text-light-color);
+}
+
+/* dark theme */
+
+.dark-theme{
+  background-color: var(--main-dark-bg-color);
+  color: var(--text-dark-color);
+}
+
+.dark-theme nav{
+  background-color: var(--element-dark-bg-color);
+  box-shadow: var(--boxShadow-dark-mode);
+  color: var(--text-dark-color);
+}
+
+.dark-theme .text{
+  color: var(--text-dark-color);
+}
+
+.dark-theme .text:hover{
+  color: var(--text-dark-color);
+  text-decoration: none;
+}
+
+.dark-theme .cardBody,.dark-theme select, .dark-theme input{
+  background-color: var(--element-dark-bg-color);
+}
+
+.dark-theme select, .dark-theme .input-box{
+  border:none;
+  outline: none;
+  background-color: var(--element-dark-bg-color);
+  color:var(--text-dark-color);
+}
+
+.dark-theme .btn-color{
+  box-shadow: var(--boxShadow-dark-mode);
+  background-color: var(--element-dark-bg-color);
+  color:var(--text-dark-color);
+}
+
+
+
+
+
+
+
+

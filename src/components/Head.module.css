@@ -1,0 +1,26 @@
+.main-head{
+    padding:10px 0;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.title-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    margin:0 auto;
+}
+
+.themeBtn{
+    cursor: pointer;
+}
+
+@media screen and (min-width:992px){
+    .title-box{
+        width:80%;
+    }
+}
