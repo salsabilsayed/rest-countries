@@ -1,6 +1,6 @@
 import React from "react";
-import Forms from "./Forms";
-import Card from "./Card";
+import Forms from "../components/Forms";
+import Card from "../components/Card";
 
 
 const Home = (props) => {

@@ -3,10 +3,13 @@ import { Route,Switch,Redirect } from 'react-router';
 import axios from 'axios';
 
 import Head from './components/Head';
-import Home from './components/Home';
-import CountryDetails from './components/CountryDetails';
+import CountryDetails from './pages/CountryDetails';
+import Home from './pages/Home';
+import NotFoundPage from "./pages/NotFoundPage";
 
 import './App.css';
+//import { faHome } from "@fortawesome/free-solid-svg-icons";
+
 
 
 function App() {
@@ -21,8 +24,12 @@ function App() {
 		axios.get(`https://restcountries.com/v2/${urlParam}`).then((res)=>{
 			console.log(res.data);
 			setCountries(res.data);
-      console.log(res);
-      setError(false);
+      if(res.data){
+        setError(false);
+      }else{
+        setError(true)
+      }
+      
 		}).catch((err)=>{
 			console.log(err);
       if(err){
@@ -44,14 +51,8 @@ function App() {
     setThemeChanged(darkTheme);
   }
 
-  let appClass;
-  if(themeChanged){
-    appClass ="light-mode light-theme";
-  }else{
-    appClass="dark-mode dark-theme";
-  }
+  let appClass = themeChanged ? "light-mode light-theme" :"dark-mode dark-theme";
   
-
   return (
     <div className={`${appClass} main`}>
       <Head changeTheme={changeTheme}/>
@@ -69,6 +70,10 @@ function App() {
         </Route>
         <Route path="/home/:countryId">
             <CountryDetails countries={countries}/>
+        </Route>
+
+        <Route path="*">
+            <NotFoundPage />
         </Route>
           
       </Switch>
